@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language SYSTEM "language.dtd">
+
+<language name="bbcode" version="1.00" kateversion="2.4" section="Markup" extensions="*.bbcode" >
+  <highlighting>
+    <contexts>
+      <context attribute="Normal Text" lineEndContext="#pop" name="Normal Text" >
+	<DetectChar attribute="Bracket" context="bracket" char="&#91;" />
+	<DetectChar attribute="BracketAttribute" context="bracketattribute" char="&#123;" />
+	<DetectChar attribute="BracketAttribute" context="#stay" char="&#124;"/>
+	
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;smallfrown&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;smallcool&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;smallconfused&#58;" />	
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;smallbiggrin&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;smallannoyed&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;smallsamused&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;smallredface&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;smallfurious&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;smalleek&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;smallyuk&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;smallwink&#58;" />	
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;smalltongue&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;smallsmile&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;smallsigh&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;smallmad&#58;" />
+
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;frown&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;cool&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;confused&#58;" />	
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;biggrin&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;annoyed&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;amused&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;redface&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;furious&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;eek&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;yuk&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;wink&#58;" />	
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;tongue&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;smile&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;sigh&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;mad&#58;" />	
+
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;sabine&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;roy&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;roach&#58;" />	
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;belkar&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;xykon&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;vaarsuvius&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;thog&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;mitd&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;nale&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;redcloak&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;elan&#58;" />	
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;haley&#58;" />
+	<StringDetect attribute="Smilie" context="#stay" String="&#58;miko&#58;" />
+      </context>
+
+      <context attribute="Bracket" lineEndContext="#stay" name="bracket" >
+	<DetectChar attribute="Bracket" context="#pop" char="&#93;" />
+	<DetectChar attribute="BracketAttribute" context="bracketattribute" char="&#61;" />
+      </context>
+      <context attribute="BracketAttribute" lineEndContext="#stay" name="bracketattribute" >
+	<DetectChar attribute="Bracket" context="#pop#pop" char="&#93;" />
+	<DetectChar attribute="BracketAttribute" context="#pop" char="&#125;" />
+	</context>
+    </contexts>
+    <itemDatas>
+      <itemData name="Normal Text" defStyleNum="dsNormal" />
+      <itemData name="Smilie" defStyleNum="dsString" />
+      <itemData name="BracketAttribute" defStyleNum="dsOthers" />
+      <itemData name="Bracket" defStyleNum="dsKeyword" />
+    </itemDatas>
+  </highlighting>
+  <general>
+    <keywords casesensitive="0"/>
+  </general>
+</language>
